@@ -1,17 +1,17 @@
 //Aquí solo esta el código que redirige los métodos del CRUD
-import * as crud from "../controllers/user.controllers.js"
+import * as crud from "../controllers/film.controllers.js"
 import Router from "express";
-const routerUsers = Router();
+const routerFilms = Router();
 //Los métodos similares deben de tener rutas, por ejemplo,
 //en otro método post, la ruta debería ser algo como: "/ruta-2/"
 
 //READ
-routerUsers.get("/", crud.getUsers)
+routerFilms.get("/", crud.getFilms)
 //CREATE
-routerUsers.post("/", crud.postUser)
+routerFilms.post("/", crud.postFilm)
 //UPDATE (Modificar / actualizar)
-routerUsers.put("/:id", crud.putUser)
+routerFilms.put("/:id", crud.putFilm)
 //DELETE
-routerUsers.delete("/:id", crud.deleteUser)
+routerFilms.delete("/:id", crud.deleteFilm)
 
-export default routerUsers
+export default routerFilms

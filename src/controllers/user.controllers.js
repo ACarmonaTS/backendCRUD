@@ -1,5 +1,5 @@
 //Aquí esta el código que solo contiene la lógica del CRUD
-import users from "../database/db.js";
+import { users } from "../database/db.js";
 import * as uuid from "uuid";
 
 //READ

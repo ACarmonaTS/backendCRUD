@@ -1,4 +1,4 @@
-const users = [
+export const users = [
     {
         id: "1",
         user_name: "mike",
@@ -6,4 +6,11 @@ const users = [
     }
 ]
 
-export default users
+export const films = [
+    {
+        id: "1",
+        title: "El señor de los anillos",
+        year: 2001,
+        price: 45
+    }
+]

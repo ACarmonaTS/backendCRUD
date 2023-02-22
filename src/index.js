@@ -1,15 +1,19 @@
 import express from "express";
-import router from "./routes/users.routes.js";
+import { config } from "dotenv"
+import routerFilms from "./routes/films.routes.js";
+import routerUsers from "./routes/users.routes.js";
 const app = express();
-const port = 4000;
+
+config()
 
 //middlewares
 app.use(express.json());
-app.use("/api/users", router) //Para enrutar los métodos
+app.use("/api/users", routerUsers) //Para enrutar los métodos
+app.use("/api/films", routerFilms)
 
 //SERVER
-app.listen(port, () => {
-  console.log("Servidor corriendo en el puerto " + port);
+app.listen(process.env.PORT, () => {
+  console.log("Servidor corriendo en el puerto " + process.env.PORT);
 });
 
 //Segmentar los métodos, la lamada de los mismos y su lógica, nos permite 
